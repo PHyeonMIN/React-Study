@@ -34,7 +34,7 @@ class Human {
     constructor() {
         this.gender ='male';
     }
-    printGender() {
+    printGender() { 
         console.log(this.gender);
     }
 }
@@ -80,6 +80,7 @@ function sortArgs(...args){
 
 // Destructuring(구조분해할당)
 // 구조분해 : 배열 요소나 객체 속성을 추출해서 변수로 저장하는 역할
+//          object merge시  키가 동일하면 뒷값 저장
 
 // 배열 구조 분해 (Array Destructuring)
 [a, b] = ['Hello', 'Max'];
@@ -93,13 +94,13 @@ function sortArgs(...args){
 //      참조 타입의 종류 : 객체와 배열
 //      ★ 재할당시 값이 아니라 포인터를 복사!!! -> 복사시 새 객체를 만들고 속성만을 복사
 
-const person = {
+const person1 = {
     name:'Max'
 };
 const secondPerson = {
-    ...person                   // 진짜로 복사
+    ...person1                   // 진짜로 복사
 };
-person.name = 'Manu';
+person1.name = 'Manu';
 
 //=====================================================================================================================
 
@@ -110,3 +111,36 @@ const doubleNumArray = numbers.map((num) => {
     return num * 2;
 });
 
+//=====================================================================================================================
+
+// Shrothand property names
+const name = 'Ellie';
+const age = '18';
+
+const ellie3 = {
+    name,
+    age
+};
+
+//=====================================================================================================================
+
+// Default parameters
+function pirntMessage(message='default'){
+    console.log(message);
+}
+
+//=====================================================================================================================
+
+// Ternary Operator
+{
+    const component=isCat?'cat':'dog';
+    console.log(component);
+}
+
+//=====================================================================================================================
+
+// Template Literals
+const weather = '맑음';
+console.log(`Today weather is ${weather} and ...`);
+
+//=====================================================================================================================
