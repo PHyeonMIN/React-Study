@@ -1,8 +1,9 @@
 # react-study
 ### 리엑트를 처음 배우는 박현민의 깃허브 ( Udemy강의 )
-------------
-first : component + useState + eventBindingFucntion  
+
+first  : component + useState + eventBindingFucntion  
 second : component styling  
+
 ------------
 2022-04-04(월) : 섹션3-26 5분  
 2022-04-05(화) : 섹션3-33 5분  
