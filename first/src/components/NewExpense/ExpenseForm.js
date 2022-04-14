@@ -51,7 +51,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,       // 여러값을 추가할 때 해당 값은 숫자가 아닌 문자열추가로 인해 + 추가
       date: new Date(enteredDate),
     };
 
