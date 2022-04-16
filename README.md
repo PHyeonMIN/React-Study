@@ -3,7 +3,7 @@
 
 first  : component + useState + eventBindingFucntion  
 second : component styling  
-third : React debugging
+third : React debugging  
 four : review project
 
 ------------
