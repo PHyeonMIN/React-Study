@@ -4,6 +4,7 @@
 first  : component + useState + eventBindingFucntion  
 second : component styling  
 third : React debugging
+four : review project
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
