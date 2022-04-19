@@ -3,8 +3,8 @@
 
 EX_01 : component + useState + eventBindingFucntion  
 EX_02 : component styling  
-EX_03 : React debugging  
-EX_04 : review project  
+EX_03 : React Debugging  
+EX_04 : Review Project  
 EX_05 : Fragments, Portals & Refs
 
 ------------
