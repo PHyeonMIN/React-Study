@@ -5,7 +5,7 @@ EX_01 : component + useState + eventBindingFucntion
 EX_02 : component styling  
 EX_03 : React debugging  
 EX_04 : review project  
-EX_05 : 
+EX_05 : Fragments, Portals & Refs
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
