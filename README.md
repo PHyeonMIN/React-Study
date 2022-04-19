@@ -4,7 +4,7 @@
 EX_01 : component + useState + eventBindingFucntion  
 EX_02 : component styling  
 EX_03 : React debugging  
-EX_04 : review project
+EX_04 : review project  
 EX_05 : 
 
 ------------
