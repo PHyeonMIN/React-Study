@@ -6,13 +6,23 @@ import Button from "../UI/Button/Button";
 
 const emailReducer = (state, action) => {
   // 리듀서 함수 내부에서는 컴포넌트 함수 내부에서 만들어진 어떤 데이터도 필요하지않기 떄문
-  if(action.type === 'USER_INPUT'){
+  if (action.type === "USER_INPUT") {
     return { value: action.val, isValid: action.val.includes("@") };
   }
-  if(action.type === 'INPUT_BLUR'){
-    return { value: state.value , isValid: state.value.includes("@") };     // 여기서 state는 이전의 값인가? 기존이 가지고 있는거??
+  if (action.type === "INPUT_BLUR") {
+    return { value: state.value, isValid: state.value.includes("@") };
   }
 
+  return { value: "", isValid: false };
+};
+
+const passwordReducer = (state, action) => {
+  if (action.type === "USER_INPUT") {
+    return { value: action.val, isValid: action.val.trim().length > 6 };
+  }
+  if (action.type === "INPUT_BLUR") {
+    return { value: state.value, isValid: state.value.trim().length > 6 };
+  }
 
   return { value: "", isValid: false };
 };
@@ -20,13 +30,18 @@ const emailReducer = (state, action) => {
 const Login = (props) => {
   // const [enteredEmail, setEnteredEmail] = useState("");
   // const [emailIsValid, setEmailIsValid] = useState();
-  const [enteredPassword, setEnteredPassword] = useState("");
-  const [passwordIsValid, setPasswordIsValid] = useState();
+  // const [enteredPassword, setEnteredPassword] = useState("");
+  // const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
     value: "",
     isValid: undefined,
+  });
+
+  const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
+    value: "",
+    isValid: null,
   });
 
   useEffect(() => {
@@ -36,12 +51,12 @@ const Login = (props) => {
       console.log("EFFECTT CLEANUP");
     };
   }, []);
-  /*
+
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log("Checking form validity!");
       setFormIsValid(
-        enteredEmail.includes("@") && enteredPassword.trim().length > 6
+        emailState.isValid && passwordState.isValid
       );
     }, 500);
 
@@ -49,38 +64,40 @@ const Login = (props) => {
       console.log("CLEANUP");
       clearTimeout(identifier); // 새로운 타이머를 설정하기 전에 마지막 타이머를 지운다.
     };
-  }, [enteredEmail, enteredPassword]);
-*/
+  }, [emailState, passwordState]);
+
   const emailChangeHandler = (event) => {
     // setEnteredEmail(event.target.value);
-    dispatchEmail({type: 'USER_INPUT', val: event.target.value});
+    dispatchEmail({ type: "USER_INPUT", val: event.target.value });
 
-    setFormIsValid(
-      event.target.value.includes("@") && enteredPassword.trim().length > 6
-    );
+    // setFormIsValid(
+    //   event.target.value.includes("@") && passwordState.isValid
+    // );
   };
 
   const passwordChangeHandler = (event) => {
-    setEnteredPassword(event.target.value);
+    // setEnteredPassword(event.target.value);
+    dispatchPassword({ type: "USER_INPUT", val: event.target.value });
 
-    setFormIsValid(
-      // event.target.value.trim().length > 6 && enteredEmail.includes("@")
-      emailState.isValid && event.target.value.trim().length > 6
-    );
+    // setFormIsValid(
+    //   // event.target.value.trim().length > 6 && enteredEmail.includes("@")
+    //   emailState.isValid && event.target.value.trim().length > 6
+    // );
   };
 
-  const validateEmailHandler = () => {
+  const EmailHandler = () => {
     // setEmailIsValid(emailState.isValid);
-    dispatchEmail({type: 'INPUT_BLUR'});    // 인풋이 포커스를 잃음
+    dispatchEmail({ type: "INPUT_BLUR" }); // 인풋이 포커스를 잃음
   };
 
-  const validatePasswordHandler = () => {
-    setPasswordIsValid(enteredPassword.trim().length > 6);
+  const PasswordHandler = () => {
+    // setPasswordIsValid(enteredPassword.trim().length > 6);
+    dispatchPassword({ type: "INPUT_BLUR" });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailState.value, enteredPassword);
+    props.onLogin(emailState.value, passwordState.value);
   };
 
   return (
@@ -97,22 +114,22 @@ const Login = (props) => {
             id="email"
             value={emailState.value}
             onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
+            onBlur={EmailHandler}
           />
         </div>
         <div
           className={`${classes.control} ${
-            passwordIsValid === false ? classes.invalid : ""
+            passwordState.isValid === false ? classes.invalid : ""
           }`}
         >
           <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
-            value={enteredPassword}
+            value={passwordState.value}
             onChange={passwordChangeHandler}
-            onBlur={validatePasswordHandler}
-          />
+            onBlur={PasswordHandler}
+          /> 
         </div>
         <div className={classes.actions}>
           <Button type="submit" className={classes.btn} disabled={!formIsValid}>
