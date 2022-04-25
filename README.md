@@ -1,5 +1,5 @@
 # react-study
-### 리엑트를 처음 배우는 박현민의 깃허브 ( Udemy강의 )
+### 처음 제대로 시작하는 리엑트 ( Udemy강의 )
 
 EX_01 : component + useState + eventBindingFucntion  
 EX_02 : component styling  
