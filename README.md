@@ -6,7 +6,7 @@ EX_02 : component styling
 EX_03 : React Debugging  
 EX_04 : Review Project  
 EX_05 : Fragments, Portals & Refs  
-EX_06 : Effects, Reducer & Context
+EX_06 : Effects, Reducer & Context  
 EX_07 : Review Project
 
 ------------
