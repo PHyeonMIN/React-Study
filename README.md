@@ -7,7 +7,8 @@ EX_03 : React Debugging
 EX_04 : Review Project  
 EX_05 : Fragments, Portals & Refs  
 EX_06 : Effects, Reducer & Context  
-EX_07 : Review Project
+EX_07 : Review Project - Good example of Reducer & Context  
+EX_08 :
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
