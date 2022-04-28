@@ -9,7 +9,7 @@ EX_05 : Fragments, Portals & Refs
 EX_06 : Effects, Reducer & Context  
 EX_07 : Review Project - Good example of Reducer & Context  
 EX_08 : React.memo, useCallback, useMemo  
-EX_09 : 
+EX_09 : DB Connection
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
