@@ -7,7 +7,7 @@ EX_03 : React Debugging
 EX_04 : Review Project  
 EX_05 : Fragments, Portals & Refs  
 EX_06 : Effects, Reducer & Context  
-EX_07 : Review Project - Good example of Reducer & Context  
+EX_07 : Review Project - Good example of Reducer & Context + BackEnd( firebase ) 
 EX_08 : React.memo, useCallback, useMemo  
 EX_09 : DB Connection  
 EX_10 : Custom Hooks  
@@ -39,4 +39,5 @@ EX_11 : Form & input + Custom Hooks
 
 2022-05-02(월) : 섹션16-213 1분  
 
-2022-05-12(목) : 섹션16-220
+2022-05-12(목) : 섹션16-220  
+2022-05-13(금) : 섹션17-
