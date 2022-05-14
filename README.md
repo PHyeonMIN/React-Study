@@ -11,8 +11,8 @@ EX_07 : Review Project - Good example of Reducer & Context + BackEnd( firebase )
 EX_08 : React.memo, useCallback, useMemo  
 EX_09 : DB Connection  
 EX_10 : Custom Hooks  
-EX_11 : Form & input + Custom Hooks
-
+EX_11 : Form & input + Custom Hooks  
+EX_12 : Redux
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
@@ -40,4 +40,5 @@ EX_11 : Form & input + Custom Hooks
 2022-05-02(월) : 섹션16-213 1분  
 
 2022-05-12(목) : 섹션16-220  
-2022-05-13(금) : 섹션17-
+2022-05-13(금) : 섹션18-251  
+2022-05-14(토) : 섹션18-251
