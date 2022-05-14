@@ -12,7 +12,8 @@ EX_08 : React.memo, useCallback, useMemo
 EX_09 : DB Connection  
 EX_10 : Custom Hooks  
 EX_11 : Form & input + Custom Hooks  
-EX_12 : Redux
+EX_12 : Redux  
+EX_13 : Redux + http req/res + Redux DevTools
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
