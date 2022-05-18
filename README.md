@@ -15,7 +15,8 @@ EX_11 : Form & input + Custom Hooks
 EX_12 : Redux  
 EX_13 : Redux + http req/res + Redux DevTools  
 EX_14 : Routing  
-EX_15 : Authenticaiton + Route활용
+EX_15 : Authenticaiton + localstorage + Route활용  
+EX_16 : Next.js
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
