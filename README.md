@@ -17,7 +17,7 @@ EX_13 : Redux + http req/res + Redux DevTools
 EX_14 : Routing  
 EX_15 : Authenticaiton + localstorage + Route활용  
 EX_16 : Next.js + MongoDB  
-
+EX_17 : redux substitute
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
@@ -51,4 +51,5 @@ EX_16 : Next.js + MongoDB
 2022-05-16(월) : 섹션20-280  
 2022-05-17(화) : 섹션21-302  
 2022-05-18(수) : 섹션23-337  
-2022-05-19(목) : 섹션23-356
+2022-05-19(목) : 섹션23-356  
+2022-05-20(금) : 섹션  
