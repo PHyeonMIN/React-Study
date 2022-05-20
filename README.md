@@ -17,7 +17,9 @@ EX_13 : Redux + http req/res + Redux DevTools
 EX_14 : Routing  
 EX_15 : Authenticaiton + localstorage + Route활용  
 EX_16 : Next.js + MongoDB  
-EX_17 : redux substitute
+EX_17 : Custom Hooks for Redux Substitute  
+EX_18 : Testing  
+EX_19 : TypeScript
 
 ------------
 2022-04-04(월) : 섹션3-26 5분  
