@@ -38,7 +38,7 @@ export const getServerSideProps = async (context) => {
 // 데이터를 다시 만들고 패치하는 것보다 빠르다. -> 캐시하고 다시 사용하기에
 export const getStaticProps = async () => {
   const client = await MongoClient.connect(
-    "mongodb+srv://123:Cgjqv93Nzs1OrsoJ@cluster0.jyvgm.mongodb.net/meetups?retryWrites=true&w=majority"
+    
   );
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
