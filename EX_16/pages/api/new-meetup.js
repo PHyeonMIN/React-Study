@@ -8,7 +8,7 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
 
-    const client = await MongoClient.connect('mongodb+srv://123:Cgjqv93Nzs1OrsoJ@cluster0.jyvgm.mongodb.net/meetups?retryWrites=true&w=majority');
+    const client = await MongoClient.connect();
     const db = client.db();
 
     // MongoDB는 문서들로 가득 찬 컬렉션을 작동시키는 NoSQL 데이터 베이스가 된다.
